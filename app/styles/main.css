@@ -81,3 +81,16 @@ body {
     border-bottom: 0;
   }
 }
+
+
+.news-row {
+  display: inline-block;
+  width: 100%;
+}
+
+.news-preview {
+  float: left;
+}
+
+
+

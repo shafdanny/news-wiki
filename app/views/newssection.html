@@ -2,8 +2,13 @@
 
 	<h4>{{section}}</h4>
 	<p>This is the {{section}} view.</p>
-	<div ng-repeat="news in results">
-		<div ng-include="'../views/newspreview.html'" ng-controller="NewspreviewCtrl" ng-init="news=news"></div> 
+	
+	<div class="news-row">
+	
+	<div ng-repeat="news in results" class="news-square">
+		
+			<div ng-include="'../views/newspreview.html'" ng-controller="NewspreviewCtrl" ng-init="news=news"></div> 
 	</div>
 
+	</div>
 </div>
