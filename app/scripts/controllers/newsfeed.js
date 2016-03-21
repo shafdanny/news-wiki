@@ -7,19 +7,41 @@
  * # NewsfeedCtrl
  * Controller of the newswikiApp
  */
+
+/* Some of the section that is available for the API */
+const section = ['world', 'politics', 'business', 'technology', 'travel', 'sports'];
+
 angular.module('newswikiApp')
   .controller('NewsfeedCtrl', ['$scope', 'nytApi', function ($scope, nytApi) {
     $scope.greeting = "Hello from Newsfeed";
+    $scope.allResults = [];
 
-    var topStoriesApiCall = nytApi.getTopStories('home');
-    topStoriesApiCall.then(function(data) {
-      console.log(data);
-      decodeApiCall(data);
+    $scope.sections = section;
+    $scope.user = {
+      sections: ['world']
+    };
+
+    section.forEach(function(entry) {
+      console.log(entry);
+      callApi(entry);
     });
-
+      
+    
+    function callApi(section) {
+      var topStoriesApiCall = nytApi.getTopStories(section);
+      topStoriesApiCall.then(function(data) {
+        console.log(data);
+        decodeApiCall(data);
+      });  
+    }
+    
     function decodeApiCall(data) {
-      var results = data.results;
-      console.log(results);  
+      var sectionObject = {};
+      sectionObject.section = data.section;
+      sectionObject.results = data.results;
+      console.log(sectionObject);
+      $scope.allResults.push(sectionObject);
+      console.log($scope.allResults);  
     }
   
-  }]);
+}]);
