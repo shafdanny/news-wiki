@@ -27,7 +27,7 @@ angular.module('newswikiApp')
 			});    
 		}).error(function (error) {
             // in case of error
-            console.log('Error retrieving data' + error);
+            console.log('Error retrieving data ' + error);
         });
     };
 	

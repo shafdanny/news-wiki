@@ -8,10 +8,18 @@
  * Controller of the newswikiApp
  */
 angular.module('newswikiApp')
-  .controller('NewsfeedCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('NewsfeedCtrl', ['$scope', 'nytApi', function ($scope, nytApi) {
+    $scope.greeting = "Hello from Newsfeed";
+
+    var topStoriesApiCall = nytApi.getTopStories('home');
+    topStoriesApiCall.then(function(data) {
+      console.log(data);
+      decodeApiCall(data);
+    });
+
+    function decodeApiCall(data) {
+      var results = data.results;
+      console.log(results);  
+    }
+  
+  }]);

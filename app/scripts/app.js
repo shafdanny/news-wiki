@@ -29,6 +29,16 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/wikipedia', {
+        templateUrl: 'views/wikipedia.html',
+        controller: 'WikipediaCtrl',
+        controllerAs: 'wikipedia'
+      })
+      .when('/newsfeed', {
+        templateUrl: 'views/newsfeed.html',
+        controller: 'NewsfeedCtrl',
+        controllerAs: 'newsfeed'
+      })
       .otherwise({
         redirectTo: '/'
       });
