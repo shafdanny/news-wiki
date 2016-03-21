@@ -25,8 +25,15 @@ angular.module('newswikiApp')
       sections: ['world', 'politics', 'business', 'technology', 'travel', 'sports']
     };
 
-    $scope.update = function () {
-      $scope.allResults = [];
+    $scope.update = function (sectUnchecked) {
+
+      var index = section.indexOf(sectUnchecked);
+      console.log(sectUnchecked + " removed " + index);
+
+      if (index > -1) {
+        $scope.allResults.splice(index, 1);
+      } 
+
       console.log($scope.user.sections);
       console.log("Updating...");
       $scope.user.sections.forEach(function(entry) {

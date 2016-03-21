@@ -40,6 +40,11 @@ angular
         controller: 'NewsfeedCtrl',
         controllerAs: 'newsfeed'
       })
+      .when('/newssection', {
+        templateUrl: 'views/newssection.html',
+        controller: 'NewssectionCtrl',
+        controllerAs: 'newssection'
+      })
       .otherwise({
         redirectTo: '/'
       });

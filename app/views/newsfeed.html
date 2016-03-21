@@ -1,22 +1,14 @@
 <div ng-controller="NewsfeedCtrl">
   
-  <label ng-repeat="section in sections" ng-click="update()">
+  <label ng-repeat="section in sections" ng-click="update(section)">
     <input type="checkbox" checklist-model="user.sections" checklist-value="section"> {{section}}
   </label>
   
-  <div ng-repeat="eachResult in allResults">
-     <div class="{{eachResult.section}}" ng-style={{eachResult.style}}>
-     <h4>{{eachResult.section}}</h4>
-     <div ng-repeat="result in eachResult.results">
-       <div class="news-article ">
-        <h4>{{result.title}}</h4>
-          <div class="news-image">
-            <img src={{result.multimedia[1].url}} />
-          </div>
-          <div class='abstract'>{{result.abstract}}</div>
-        </div>
+  <div ng-repeat="section in user.sections">
+    <div class="section" ng-style="{ 'background-color':'red'}">
+      <h4>{{section}}</h4>
+      <div ng-include="'../views/newssection.html'" ng-controller="NewssectionCtrl" ng-init="section=section"></div> 
     </div>
-    </div>
-     </div>
+    
   </div>
 </div>
