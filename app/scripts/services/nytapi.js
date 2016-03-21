@@ -26,11 +26,11 @@ angular.module('newswikiApp')
         })
         .error(function (error) {
             // in case of error
-            console.log('Error retrieving data')
+            console.log('Error retrieving data' + error);
         });
-    }
+    };
 
     this.hello = function(name) { 
-    	console.log('Hello ' + name) 
+    	console.log('Hello ' + name);
     };
   }]);
