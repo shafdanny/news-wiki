@@ -23,7 +23,7 @@ angular.module('newswikiApp')
         var deferred = $q.defer();
     	var response = $http.get(topStoriesUrl + section + '.json?api-key=' + topStoriesApiKey)
     	.success(function (data) {
-            console.log(data);
+            //console.log(data);
             deferred.resolve(data);
         })
         .error(function (error) {

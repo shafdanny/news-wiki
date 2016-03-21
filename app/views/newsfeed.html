@@ -1,12 +1,11 @@
 <div ng-controller="NewsfeedCtrl">
   
-  <label ng-repeat="section in sections" ng-click="update(section)">
+  <label ng-repeat="section in sections">
     <input type="checkbox" checklist-model="user.sections" checklist-value="section"> {{section}}
   </label>
   
   <div ng-repeat="section in user.sections">
     <div class="section" ng-style="{ 'background-color':'red'}">
-      <h4>{{section}}</h4>
       <div ng-include="'../views/newssection.html'" ng-controller="NewssectionCtrl" ng-init="section=section"></div> 
     </div>
     

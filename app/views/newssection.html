@@ -1,5 +1,9 @@
-<div class={{section}}>
+<div class="news-section {{section}}">
 
-<p>This is the {{section}} view.</p>
+	<h4>{{section}}</h4>
+	<p>This is the {{section}} view.</p>
+	<div ng-repeat="news in results">
+		<div ng-include="'../views/newspreview.html'" ng-controller="NewspreviewCtrl" ng-init="news=news"></div> 
+	</div>
 
 </div>

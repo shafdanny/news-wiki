@@ -15,52 +15,12 @@ const color = ['#ff0000'];
 angular.module('newswikiApp')
   .controller('NewsfeedCtrl', ['$scope', 'nytApi', function ($scope, nytApi) {
     $scope.greeting = "Hello from Newsfeed";
-    $scope.allResults = [];
-    $scope.color = color;
-
+    
     $scope.sections = section;
 
     // by default, all sections is selected
     $scope.user = {
       sections: ['world', 'politics', 'business', 'technology', 'travel', 'sports']
     };
-
-    $scope.update = function (sectUnchecked) {
-
-      var index = section.indexOf(sectUnchecked);
-      console.log(sectUnchecked + " removed " + index);
-
-      if (index > -1) {
-        $scope.allResults.splice(index, 1);
-      } 
-
-      console.log($scope.user.sections);
-      console.log("Updating...");
-      $scope.user.sections.forEach(function(entry) {
-        console.log(entry);
-        callApi(entry);
-      });
-    };
-    
-    $scope.update();
-    
-    function callApi(section) {
-      var topStoriesApiCall = nytApi.getTopStories(section);
-      topStoriesApiCall.then(function(data) {
-        console.log(data);
-        decodeApiCall(data);
-      });  
-    }
-    
-    function decodeApiCall(data) {
-      var sectionObject = {};
-      sectionObject.section = data.section;
-      sectionObject.results = data.results;
-      var style = { 'background-color':'red'};
-      sectionObject.style = style;
-      console.log(sectionObject);
-      $scope.allResults.push(sectionObject);
-      console.log($scope.allResults);  
-    }
   
 }]);
