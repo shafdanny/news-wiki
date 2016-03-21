@@ -16,6 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'checklist-model'
   ])
   .config(function ($routeProvider) {
     $routeProvider

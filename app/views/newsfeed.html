@@ -1,25 +1,22 @@
-<p>This is the newsfeed view.</p>
 <div ng-controller="NewsfeedCtrl">
-  {{ greeting }}
-  <label ng-repeat="section in sections">
-    <input type="checkbox" checklist-model="user.sections" checklist-value="role"> {{section}}
+  
+  <label ng-repeat="section in sections" ng-click="update()">
+    <input type="checkbox" checklist-model="user.sections" checklist-value="section"> {{section}}
   </label>
   
   <div ng-repeat="eachResult in allResults">
+     <div class="{{eachResult.section}}" ng-style={{eachResult.style}}>
      <h4>{{eachResult.section}}</h4>
      <div ng-repeat="result in eachResult.results">
-     <div class="news-article " >
-      <h4>{{result.title}}</h4>
-        <div class="news-image">
-          <img src={{result.multimedia[1].url}} />
+       <div class="news-article ">
+        <h4>{{result.title}}</h4>
+          <div class="news-image">
+            <img src={{result.multimedia[1].url}} />
+          </div>
+          <div class='abstract'>{{result.abstract}}</div>
         </div>
-        <div class='abstract'>{{result.abstract}}</div>
-      </div>
+    </div>
     </div>
      </div>
   </div>
-
-  <li ng-repeat="result in eachResult.results">
-       
-     </li>
 </div>
