@@ -13,7 +13,8 @@ angular.module('newswikiApp')
   	$scope.articleClick = function() {
       $rootScope.news = $scope.news;
       console.log($rootScope.news);
-  		$window.open('#/example', '_blank');
+  		var newWindow = $window.open('#/example', '_blank');
+      newWindow.news = $scope.news;
   	}
 
   }]);

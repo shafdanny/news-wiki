@@ -8,6 +8,6 @@
  * Controller of the newswikiApp
  */
 angular.module('newswikiApp')
-  .controller('ExampleCtrl', [function () {
-    
+  .controller('ExampleCtrl', ['$scope', function ($scope) {
+      $scope.news = window.news;
   }]);

@@ -118,6 +118,7 @@ body {
 }
 .prevButton {
   position: absolute;
+  z-index: 1;
 }
 
 .search-bar{
