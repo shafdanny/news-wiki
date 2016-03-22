@@ -14,11 +14,16 @@ angular.module('newswikiApp')
   	var logdata = function (data){
   		console.log(data);
   		$scope.wikipediaArticle = data;
-  	}
+  	};
 
   	$scope.searchWiki = function() {
   		console.log($scope.searchTerm);
   		wikiApi.getWiki($scope.searchTerm, logdata);
-  	}
+  	};
+
+    $scope.change = function(){
+      console.log("Something is changing !");
+    }
+
 
   }]);

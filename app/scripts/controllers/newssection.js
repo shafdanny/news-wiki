@@ -20,7 +20,7 @@ angular.module('newswikiApp')
   		//console.log(filteredData);
   		$scope.results = $scope.filteredData.slice($scope.count, $scope.count+5);
   		$scope.maxNbArticle = $scope.filteredData.length;
-  	})
+  	});
 
   	function containImage(data) {
   		return (data.multimedia.length>2);
@@ -33,7 +33,7 @@ angular.module('newswikiApp')
   			$scope.results = $scope.filteredData.slice($scope.count, $scope.count+5);
   		}
   		
-  	}
+  	};
 
   	$scope.decrement = function () {
   		
@@ -42,6 +42,6 @@ angular.module('newswikiApp')
   			$scope.results = $scope.filteredData.slice($scope.count, $scope.count+5);
   		}
   		
-  	}
+  	};
 
   }]);

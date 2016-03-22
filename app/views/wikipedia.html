@@ -3,7 +3,7 @@
 
 	<div class="search-bar">
 	<img src="http://conservapedia.com/images/thumb/6/63/Wikipedia-logo.png/50px-Wikipedia-logo.png" />
-	<input type="text" name="search" ng-model="searchTerm" >
+	<input type="text" name="search" ng-model="searchTerm" ng-change="change()">
 	<button ng-click="searchWiki()">Search</button>
 	</div>
 	<div ng-bind-html="wikipediaArticle" style="margin-top: 5em;"></div>

@@ -15,6 +15,6 @@ angular.module('newswikiApp')
       console.log($rootScope.news);
   		var newWindow = $window.open('#/example', '_blank');
       newWindow.news = $scope.news;
-  	}
+  	};
 
   }]);
