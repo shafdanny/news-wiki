@@ -114,7 +114,7 @@ body {
 
 .nextButton {
   position: absolute;
-  margin-left:-22px;
+  margin-left:-32px;
 }
 .prevButton {
   position: absolute;
@@ -133,7 +133,7 @@ body {
   -moz-transition: opacity 500ms;
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
-  background-color: rgba(248, 248, 255, 0.6);
+  background-color: rgba(250, 250, 255, 0.8);
   text-align: center;
   position: absolute;
   opacity: 0;
@@ -152,4 +152,17 @@ body {
 
 span.spacer {
    padding:0 5px;
+}
+
+.news-row button{
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+  height: 140px;
+  opacity: 0.3;
+}
+
+.news-row button:hover{
+  opacity: 0.9;
 }
