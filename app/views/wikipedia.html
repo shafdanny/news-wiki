@@ -1,7 +1,10 @@
 
 <div ng-controller="WikipediaCtrl" class="wiki-article">
+
+	<div class="search-bar">
+	<img src="http://conservapedia.com/images/thumb/6/63/Wikipedia-logo.png/50px-Wikipedia-logo.png" />
 	<input type="text" name="search" ng-model="searchTerm" >
 	<button ng-click="searchWiki()">Search</button>
-
-	<div ng-bind-html="wikipediaArticle"></div>
+	</div>
+	<div ng-bind-html="wikipediaArticle" style="margin-top: 5em;"></div>
 </div>
