@@ -50,6 +50,11 @@ angular
         controller: 'NewspreviewCtrl',
         controllerAs: 'newspreview'
       })
+      .when('/example', {
+        templateUrl: 'views/example.html',
+        controller: 'ExampleCtrl',
+        controllerAs: 'example'
+      })
       .otherwise({
         redirectTo: '/'
       });

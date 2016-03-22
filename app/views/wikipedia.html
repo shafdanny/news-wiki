@@ -1,1 +1,7 @@
-<p>This is the wikipedia view.</p>
+
+<div ng-controller="WikipediaCtrl" class="wiki-article">
+	<input type="text" name="search" ng-model="searchTerm" >
+	<button ng-click="searchWiki()">Search</button>
+
+	<div ng-bind-html="wikipediaArticle"></div>
+</div>

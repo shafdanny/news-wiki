@@ -5,7 +5,7 @@
   </label>
   
   <div ng-repeat="section in user.sections">
-    <div class="section" ng-style="{ 'background-color':'red'}">
+    <div class="section">
       <div ng-include="'../views/newssection.html'" ng-controller="NewssectionCtrl" ng-init="section=section"></div> 
     </div>
     

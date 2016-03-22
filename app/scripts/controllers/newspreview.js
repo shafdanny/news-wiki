@@ -8,6 +8,10 @@
  * Controller of the newswikiApp
  */
 angular.module('newswikiApp')
-  .controller('NewspreviewCtrl', ['$scope', 'nytApi', function ($scope, nytApi) {
-  	
+  .controller('NewspreviewCtrl', ['$scope', 'nytApi', '$window', function ($scope, nytApi, $window) {
+
+  	$scope.articleClick = function() {
+  		$window.open('#/example', '_blank');
+  	}
+
   }]);

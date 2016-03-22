@@ -33,6 +33,6 @@ angular.module('newswikiApp')
 	
 	this.extract = this.extract;
 
-    console.log('Wiki');
+    //console.log('Wiki');
    
   }]);

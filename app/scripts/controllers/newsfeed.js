@@ -9,7 +9,7 @@
  */
 
 /* Some of the section that is available for the API */
-const section = ['world', 'politics', 'business', 'technology', 'travel', 'sports'];
+const section = ['world', 'politics', 'technology', 'travel', 'sports'];
 const color = ['#ff0000'];
 
 angular.module('newswikiApp')
@@ -20,7 +20,7 @@ angular.module('newswikiApp')
 
     // by default, all sections is selected
     $scope.user = {
-      sections: ['world', 'politics', 'business', 'technology', 'travel', 'sports']
+      sections: ['world', 'politics', 'technology', 'travel', 'sports']
     };
   
 }]);

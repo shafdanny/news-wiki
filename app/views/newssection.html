@@ -1,14 +1,19 @@
 <div class="news-section {{section}}">
 
-	<h4>{{section}}</h4>
-	<p>This is the {{section}} view.</p>
-	
 	<div class="news-row">
+		<h4>{{capitalSection}}</h4>
+			<button ng-click="decrement()" class="prevButton">
+	  		<
+		</button>
 	
-	<div ng-repeat="news in results" class="news-square">
-		
-			<div ng-include="'../views/newspreview.html'" ng-controller="NewspreviewCtrl" ng-init="news=news"></div> 
-	</div>
+		<div ng-repeat="news in results" class="news-square">
+			
+				<div ng-include="'../views/newspreview.html'" ng-controller="NewspreviewCtrl" ng-init="news=news"></div> 
+		</div>
+
+		<button ng-click="increment()" class="nextButton">
+	  		>
+		</button>
 
 	</div>
 </div>
