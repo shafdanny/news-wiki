@@ -1,9 +1,12 @@
 <div ng-controller="NewsfeedCtrl">
   
-  <label ng-repeat="section in sections">
-    <input type="checkbox" checklist-model="user.sections" checklist-value="section"> {{section}}
-  </label>
-  
+  <div class="filter-checkbox">
+    <span>Filter news category : </span>
+    <label ng-repeat="section in sections">
+      <input type="checkbox" checklist-model="user.sections" checklist-value="section"><span> {{section}} </span>
+    </label>
+  </div>
+
   <div ng-repeat="section in user.sections">
     <div class="section">
       <div ng-include="'../views/newssection.html'" ng-controller="NewssectionCtrl" ng-init="section=section"></div> 

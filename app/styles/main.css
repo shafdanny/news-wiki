@@ -166,3 +166,7 @@ span.spacer {
 .news-row button:hover{
   opacity: 0.9;
 }
+
+label {
+  margin: 0.3em;
+}

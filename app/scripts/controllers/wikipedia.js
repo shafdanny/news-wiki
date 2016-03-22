@@ -9,6 +9,8 @@
  */
 angular.module('newswikiApp')
   .controller('WikipediaCtrl', ['$scope', 'wikiApi', function ($scope, wikiApi) {
+    $scope.wikipediaArticle = "Use the search box above to search in Wikipedia";
+
   	var logdata = function (data){
   		console.log(data);
   		$scope.wikipediaArticle = data;
